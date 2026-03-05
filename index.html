@@ -1,12 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/css/style.css">
     <title>Collaborative-Web-Build</title>
 </head>
+
 <body>
-    
+    <header>
+        <nav class="main-nav">
+            <ul class="my_Library">
+                <li>
+                    <img src="./assets/header_icons/Frame 4.png" alt="Library" />
+                    <a href="/library" class="library-link">My Library </a>
+                </li>
+            </ul>
+            <ul class="home_Page">
+                <li class="active">
+                    <img src="./assets/header_icons/Vector 26.png" alt="Home Page" />
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <img src="./assets/header_icons/Star 1.png" alt="Discover" />
+                    <a href="/discover">Discover</a>
+                </li>
+
+                <li>
+                    <img src="./assets/header_icons/Ellipse 11.png" alt="Search" class="search-icon" />
+                    <input type="search" placeholder="Search" />
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="user-actions">
+            <ul>
+                <li>
+                    <a href="#"><img src="./assets/header_icons/Frame 5.png" alt="Notifications" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./assets/header_icons/Group 101.png" alt="Lock" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./assets/header_icons/Group 83.png" alt="Profile" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./assets/header_icons/Group 80.png" alt="Settings" /></a>
+                </li>
+                <li>
+                    <img src="./assets/header_icons/Sprite-0002 1.png" alt="User Avatar" class="avatar" />
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <nav class="content-filter">
+            <!-- aria-label="Content filter" -->
+            <ul>
+                <li class="active"><a href="#">All</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Podcasts</a></li>
+                <li><a href="#">Audiobooks</a></li>
+            </ul>
+            <img src="./assets/header_icons/icons big.png" alt="Icons Big" />
+        </nav>
+
+        <!-- Section Made For You -->
+
+        <section class="shelf_Header">
+            <div class="heading_Area">
+                <h3>Made For You</h3>
+                <div class="direction_Carousel">
+                    <img src="./assets/home_images/icons big (2).png" alt="Left Direction" />
+                    <img src="./assets/home_images/icons big (3).png" alt="Right Direction" />
+                    <img src="./assets/home_images/pc-home-more.png" alt="More" />
+                </div>
+            </div>
+            <section class="made-for-you">
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 6.png" alt="Discover Weekly" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Discover Weekly</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Your weekly mixtape of fresh music.</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 7.png" alt="Daily Mix 1" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Daily Mix 1</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Linkin Park, System Of A Down, Coal Chamber...</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 8.png" alt="Daily Mix 2" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Daily Mix 2</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Avril Lavigne, Lorde, Charli XCX and more</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 9.png" alt="Daily Mix 3" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Daily Mix 3</h4>
+                        <span>50</span>
+                    </div>
+                    <p>The Strokes, Martin Garrix, MGMT and more</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 10.png" alt="Daily Mix 4" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Daily Mix 4</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Chuck Berry, Elvis Presley, Roy Orbison and more</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 11.png" alt="Daily Mix 5" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Daily Mix 5</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Frank Sinatra, Gerhard Trede, Dean Martin and more</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 17.png" alt="Nirvana Radio" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Nirvana Radio</h4>
+                        <span>50</span>
+                    </div>
+                    <p>The Strokes, Martin Garrix, MGMT and more</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 16.png" alt="Fall Out Boy Radio" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Fall Out Boy Radio</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Your weekly mixtape of fresh music.</p>
+                </article>
+            </section>
+        </section>
+
+        <!-- Section Your top mixes -->
+
+        <section class="shelf_Header">
+            <div class="heading_Area">
+                <h3>Your top mixes</h3>
+                <div class="direction_Carousel">
+                    <img src="./assets/home_images/icons big (2).png" alt="Left Direction" />
+                    <img src="./assets/home_images/icons big (3).png" alt="Right Direction" />
+                    <img src="./assets/home_images/pc-home-more.png" alt="More" />
+                </div>
+            </div>
+            <section class="made-for-you">
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 2.png" alt="Rock Mix" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Rock Mix</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 3.png" alt="Chill Mix" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Chill Mix</h4>
+                        <span>50</span>
+                    </div>
+                    <p>MF DOOM, Daft Punk, The Chainsmokers, and more</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 4.png" alt="Pop Mix" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Pop Mix</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 16 (1).png" alt="Daft Punk Mix" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Daft Punk Mix</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Daft Punk, MGMT, Muse, and more</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 4 (1).png" alt="Happy Mix" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Happy Mix</h4>
+                        <span>50</span>
+                    </div>
+                    <p>The Turtles, Van Morrison, ABBA and more</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 17 (1).png" alt="David Bowie Mix" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>David Bowie Mix</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Soft Cell, The Who and The Clash</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 18.png" alt="Upbeat Mix" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Upbeat Mix</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Kylie Minogue, Charli XCX, Cage The Elephant and...</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card__img-wrapper">
+                        <img src="./assets/home_images/image 19.png" alt="60s Mix" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>60s Mix</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Chuck Berry, Skeeter David, Van Morrison and...</p>
+                </article>
+            </section>
+        </section>
+
+        <!-- Section Your favorite artists -->
+
+        <!-- მედიაზე არ ვარგა  -->
+
+        <section class="shelf_Header">
+            <div class="heading_Area">
+                <h3>Your favorite artists</h3>
+                <div class="direction_Carousel">
+                    <img src="./assets/home_images/icons big (2).png" alt="Left Direction" />
+                    <img src="./assets/home_images/icons big (3).png" alt="Right Direction" />
+                    <img src="./assets/home_images/pc-home-more.png" alt="More" />
+                </div>
+            </div>
+            <section class="made-for-you fav_Artists">
+                <article class="music-card">
+                    <div class="music-card--rounded">
+                        <img src="./assets/home_images/image 3.png" alt="Chill Mix" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Chill Mix</h4>
+                        <span>50</span>
+                    </div>
+                    <p>MF DOOM, Daft Punk, The Chainsmokers, and more</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card--rounded">
+                        <img src="./assets/home_images/image 16 (1).png" alt="Daft Punk Mix" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>Daft Punk Mix</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Daft Punk, MGMT, Muse, and more</p>
+                </article>
+                <article class="music-card">
+                    <div class="music-card--rounded">
+                        <img src="./assets/home_images/image 17 (1).png" alt="David Bowie Mix" />
+                    </div>
+                    <div class="discover_Weekly">
+                        <h4>David Bowie Mix</h4>
+                        <span>50</span>
+                    </div>
+                    <p>Soft Cell, The Who and The Clash</p>
+                </article>
+            </section>
+        </section>
+
+        <!-- left aside section -->
+
+        <aside class="aside_Lists">
+            <div class="sidebar_Items">
+                <div class="filter_Part">
+                    <img src="./assets/aside_icons/icons big (4).png" alt="Pin" />
+                    <a href="#">Pins</a>
+                </div>
+                <img src="./assets/aside_icons/icons big (5).png" alt="More" />
+            </div>
+            <div class="sidebar_Items">
+                <div class="filter_Part">
+                    <img src="./assets/aside_icons/icons big (6).png" alt="Playlists" />
+                    <a href="#">Playlists</a>
+                </div>
+                <img src="./assets/aside_icons/icons big (5).png" alt="More" />
+            </div>
+            <div class="sidebar_Items">
+                <div class="filter_Part">
+                    <img src="./assets/aside_icons/icons big (7).png" alt="Liked songs" />
+                    <a href="#">Liked songs</a>
+                </div>
+            </div>
+            <div class="sidebar_Items">
+                <div class="filter_Part">
+                    <img src="./assets/aside_icons/icons big (8).png" alt="Saves" />
+                    <a href="#">Saves</a>
+                </div>
+            </div>
+            <div class="sidebar_Items">
+                <div class="filter_Part">
+                    <img src="./assets/aside_icons/icons big (9).png" alt="Albums" />
+                    <a href="#">Albums</a>
+                </div>
+            </div>
+            <div class="sidebar_Items">
+                <div class="filter_Part">
+                    <img src="./assets/aside_icons/icons big (10).png" alt="Folders" />
+                    <a href="#">Folders</a>
+                </div>
+            </div>
+            <div class="sidebar_Items">
+                <div class="filter_Part">
+                    <img src="./assets/aside_icons/icons big (11).png" alt="Podcasts" />
+                    <a href="#">Podcasts</a>
+                </div>
+            </div>
+            <div class="sidebar_Items">
+                <div class="filter_Part">
+                    <img src="./assets/aside_icons/icons big (12).png" alt="Audiobooks" />
+                    <a href="#">Audiobooks</a>
+                </div>
+            </div>
+            <div class="sidebar_Items">
+                <div class="filter_Part">
+                    <img src="./assets/aside_icons/icons big (13).png" alt="Artists" />
+                    <a href="#">Artists</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- right aside section -->
+        <!-- <aside class="activity_aside">
+            <div class="activit_List">
+                <p>Friends Activity</p>
+                <div class="activit_Icons">
+                    <img src="./assets/aside_icons/icons big (14).png" alt="User" />
+                    <img src="./assets/aside_icons/icons big (15).png" alt="Cancel" />
+                </div>
+            </div>
+            <div class="activity_musics">
+                <img src="./assets/aside_icons/friend4.png" alt="Avatar" />
+                <div class="music_desc">
+                    <img src="" alt="">
+                    <p></p>
+                    <span></span>
+                </div>
+            </div>
+        </aside> -->
+    </main>
 </body>
+
 </html>
