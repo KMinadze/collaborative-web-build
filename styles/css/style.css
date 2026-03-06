@@ -39,20 +39,21 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #060606;
+  font-family: "Satoshi", sans-serif;
 }
 
 a {
-  color: #898989;
   font-size: 14px;
+  color: #898989;
   letter-spacing: 3%;
 }
 
-header {
+.main-header {
   width: 100%;
   height: 54px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding-inline: 15px;
   position: fixed;
   top: 0;
@@ -106,8 +107,8 @@ input[type=search] {
   background: transparent;
   border: none;
   outline: none;
-  color: #898989;
   font-size: 14px;
+  color: #898989;
   letter-spacing: 3%;
 }
 
@@ -133,7 +134,8 @@ input[type=search]::-webkit-search-cancel-button {
 main {
   width: 100%;
   min-height: 100vh;
-  padding-inline: 25px;
+  padding-top: 54px;
+  display: flex;
 }
 
 .content-filter {
@@ -141,8 +143,8 @@ main {
   width: calc(100% - 262px);
   padding-inline: 25px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 54px;
   left: 262px;
@@ -185,42 +187,48 @@ main {
 }
 
 /* main sections  */
-.shelf_Header {
-  height: 312px;
-  margin-top: 16px;
+.main_Content {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 262px);
+  margin-top: 59px;
+  border-radius: 8px;
+  border: 1px solid #202020;
+  padding-inline: 15px;
+}
+
+.shelf {
+  min-height: 312px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 15px;
-  margin-top: 113px;
-  margin-left: 262px;
 }
 
-.heading_Area {
+.heading-area {
   height: 41px;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-.heading_Area h3 {
-  font-size: 20px;
+.heading-area h3 {
   font-weight: 700;
+  font-size: 20px;
   color: #e0e0e0;
   letter-spacing: 3%;
 }
 
-.direction_Carousel img {
+.direction-carousel img {
   cursor: pointer;
 }
 
 .made-for-you {
   width: 100%;
-  height: 256px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 18px;
 }
 
 .made-for-you .music-card {
@@ -280,20 +288,20 @@ main {
   color: #b3b3b3;
 }
 
-.discover_Weekly {
+.discover-weekly {
   display: flex;
   justify-content: space-between;
 }
 
-.discover_Weekly h4,
-.discover_Weekly span {
+.discover-weekly h4,
+.discover-weekly span {
   font-size: 14px;
-  font-weight: 500;
   color: #e0e0e0;
   letter-spacing: 3%;
+  font-weight: 500;
 }
 
-.discover_Weekly span {
+.discover-weekly span {
   color: rgba(212, 141, 10, 0.562);
   font-weight: bold;
 }
@@ -305,7 +313,7 @@ main {
 }
 
 /* მედიაზე არ ვარგა  */
-.fav_Artists {
+.favourite-artists {
   justify-content: flex-start;
   gap: 18px;
 }
@@ -317,26 +325,20 @@ main {
 }
 
 /* left aside section */
-.aside_Lists {
+.sidebar {
   width: 262px;
-  height: calc(100vh - 54px);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 11px;
-  position: absolute;
-  top: 54px;
-  left: 0;
-  z-index: 997;
-  border-radius: 10px;
-  border: 1px solid #202020;
 }
 
 .sidebar_Items {
   width: 248px;
   height: 41px;
   display: flex;
-  align-self: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .filter_Part {
@@ -347,25 +349,6 @@ main {
 }
 
 /* rightaside section */
-.activity_aside {
-  width: 262px;
-  height: calc(100vh - 54px);
-}
-
-.activit_List {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.activit_List p {
-  font-size: 14px;
-  font-weight: 500;
-  color: #e0e0e0;
-  letter-spacing: 3%;
-}
-
 * {
   margin: 0;
   padding: 0;
