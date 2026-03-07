@@ -16,34 +16,49 @@ body {
   background-color: #060606;
   font-family: "Satoshi", sans-serif;
 }
-
+#header-placeholder{
+    display: none;
+}
+.search-placeholder{
+    padding-top: 6px;
+    height: 42px;
+    @include flex-between();
+    padding-inline: 15px;
+    gap: 10px;
+}
+.mobile-search{
+@include flex-between();
+width: 306px;
+background-color: #20202080;
+border-radius: 10px;
+height: 40px;
+padding-inline: 6px;
+}
 main {
   width: 100%;
   height: 100%;
   display: flex;
+  padding-top: 10px;
 }
 
 .Recent_searches {
   margin-top: 20px;
   padding-left: 20px;
   width: 100%;
-
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   gap: 15px;
 }
 
 .Recent_searches h3 {
-  color: #e0e0e0;
-  font-size: 20px;
-  letter-spacing: 3%;
+  @include text-style($size: 20px, $color: e0e0e0);
   font-weight: 700;
 }
 
 .artists_container {
   width: 100%;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -51,16 +66,12 @@ main {
 .artists {
   width: 169px;
   height: 205px;
-  display: flex;
+  @include flex-between();
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .artists p {
-  color: #e0e0e0;
-  font-size: 14px;
-  letter-spacing: 3%;
+  @include text-style($color: #e0e0e0);
 }
 
 .circled_img {
@@ -108,31 +119,22 @@ main {
 }
 
 .Black_Holes_card p {
-  font-size: 14px;
+  @include text-style($color: #e0e0e0);
   font-weight: 500;
-  color: #e0e0e0;
-  letter-spacing: 3%;
 }
 
 .Black_Holes_card span {
-  font-size: 12px;
-  letter-spacing: 3%;
-  color: #898989;
+  @include text-style($size: 12px, $color: #898989);
 }
 .category_card h2 {
   height: 40;
-
-  color: #e0e0e0;
-  font-size: 20px;
-  letter-spacing: 3%;
+  @include text-style($size: 20px, $color: #e0e0e0);
   font-weight: 700;
 }
 .category_card h3 {
+  @include text-style($size: 18px, $color: #e0e0e0);
   height: 40;
-  font-size: 18px;
-  letter-spacing: 3%;
   font-weight: 500;
-  color: #e0e0e0;
 }
 .cards_grid {
   display: flex;
@@ -143,17 +145,15 @@ main {
 }
 .category-card {
   width: 170px;
-  height: 170px;
+  height: 100px;
   border-radius: 10px;
   background-color: #1e3264;
   position: relative;
   overflow: hidden;
 }
 .category-name {
+  @include text-style($size: 20px, $color: #ffffff);
   font-weight: 900;
-  font-size: 20px;
-  letter-spacing: 3%;
-  color: #ffffff;
   width: 95px;
   height: 54px;
   top: 20px;
@@ -169,7 +169,25 @@ main {
   right: 0;
 }
 .direction_icon {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex-between();
+}
+
+
+
+
+
+
+@media screen and (min-width: 375px) { 
+    #header-placeholder{
+    display: flex;
+}
+  .artists_container {
+    display: flex;
+  }
+  .category-card {
+    height: 170px;
+  }
+  Recent_searches{
+    display: flex;
+  }
 }
