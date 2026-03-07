@@ -552,6 +552,34 @@ main {
   align-items: center;
 }
 
+.color-orange {
+  background-color: #BA5D07;
+}
+
+.color-blue {
+  background-color: #8D67AB;
+}
+
+.purple-color {
+  background-color: #B02897;
+}
+
+.green-color {
+  background-color: #006450;
+}
+
+.red-color {
+  background-color: #E91429;
+}
+
+.red-orange-color {
+  background-color: #D84000;
+}
+
+.light-green-color {
+  background-color: #148A08;
+}
+
 @media screen and (min-width: 375px) {
   #header-placeholder {
     display: flex;
