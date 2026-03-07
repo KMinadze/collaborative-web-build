@@ -1,0 +1,82 @@
+@use "../abstracts/mixins" as *;
+
+a {
+  @include text-style();
+}
+
+.main-header {
+  width: 100%;
+  height: 54px;
+  @include flex-between;
+  padding-inline: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #060606;
+  z-index: 999;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.my_Library {
+  width: 262px;
+}
+
+.my_Library li {
+  height: 41px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.home_Page {
+  display: flex;
+  gap: 12px;
+}
+
+.home_Page li {
+  height: 41px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 210px;
+  padding-inline: 15px;
+  cursor: pointer;
+}
+
+.active {
+  border-radius: 8px;
+  background-color: #202020;
+}
+
+.active a {
+  color: #e0e0e0;
+}
+
+input[type="search"] {
+  background: transparent;
+  border: none;
+  outline: none;
+  @include text-style();
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.user-actions ul {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  gap: 13px;
+}
+
+.user-actions ul li a {
+  width: 41px;
+  height: 41px;
+  @include flex-between($justify: center);
+}

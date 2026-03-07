@@ -1,19 +1,19 @@
 // ABSTRACTS
-@use 'abstracts/fonts';
-@use 'abstracts/variables';
-@use 'abstracts/mixins';
+@use './abstracts/fonts' as *;
+@use './abstracts/variables' as *;
+@use './abstracts/mixins' as *;
 
 // LAYOUT
-@use 'layout/navbar';
-@use 'layout/header';
-@use 'layout/aside';
-@use 'layout/footer';
+@use './layout/navbar' as *;
+@use './layout/header' as *;
+@use './layout/aside' as *;
+@use './layout/footer' as *;
 
 // COMPONENTS
-@use 'components/buttons';
-@use 'components/card';
+@use './components/buttons';
+@use './components/card';
 
 // PAGES
-@use 'pages/home';
-@use 'pages/search';
-@use 'pages/tables'
+@use './pages/home' as *;
+@use './pages/search' as *;
+@use './pages/tables' as *;

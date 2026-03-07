@@ -1,0 +1,96 @@
+@use "../abstracts/mixins" as *;
+
+.player-bar {
+    width: calc(100% - 272px);
+    height: 80px;
+    padding-inline: 12px;
+    margin: 0 5px 0 5px;
+    background-color: #333842;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 888;
+    display: flex;
+    align-items: center;
+}
+
+.music-player {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+}
+
+.music-player img {
+    cursor: pointer;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.control-icon {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.control-icon:hover {
+    opacity: 1;
+}
+
+.play-btn {
+    cursor: pointer;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 250px;
+    gap: 8px;
+}
+
+.time {
+    @include text-style($size: 12px, $color: #898989, $spacing: 3%)
+}
+
+.progress-rail {
+    flex-grow: 1;
+    height: 4px;
+    background-color: #89898945;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #E0E0E0;
+    border-radius: 2px;
+}
+
+.progress-rail:hover .progress-fill {
+    background-color: #1ed760;
+}
+
+
+.icon-group {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-group img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.meta-ai {
+    padding-left: 5px;
+    border-left: 2px solid #8989894D;
+}
