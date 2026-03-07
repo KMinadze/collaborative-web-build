@@ -1,0 +1,41 @@
+@use "../abstracts/mixins" as *;
+
+.content-filter {
+  height: 59px;
+  width: calc(100% - 262px);
+  padding-inline: 25px;
+  @include flex-between;
+  position: fixed;
+  top: 54px;
+  left: 262px;
+  z-index: 998;
+  background-color: #060606;
+}
+
+.content-filter ul {
+  display: flex;
+  gap: 31px;
+}
+
+.content-filter ul li {
+  padding-inline: 15px;
+  height: 35px;
+  @include flex-between($justify: center);
+  background-color: #20202080;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.content-filter ul a {
+  color: #e0e0e0;
+}
+
+.content-filter ul .active {
+  background-color: #e0e0e0;
+  @include flex-between($justify: center);
+}
+
+.content-filter ul .active a {
+  font-weight: 700;
+  @include text-style($color: #111111);
+}

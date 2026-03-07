@@ -1,0 +1,22 @@
+@use "../abstracts/mixins" as *;
+
+/* left aside section */
+
+.sidebar {
+  width: 262px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.sidebar_Items {
+  width: 248px;
+  height: 41px;
+  @include flex-between($justify: space-between);
+}
+
+.filter_Part {
+  @include flex-between($justify: center);
+  cursor: pointer;
+}
