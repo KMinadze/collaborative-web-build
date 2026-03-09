@@ -55,6 +55,11 @@ a {
 .active a {
   color: #e0e0e0;
 }
+a {
+  &:visited {
+    color: purple;
+  }
+}
 
 input[type="search"] {
   background: transparent;
@@ -67,9 +72,9 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
-.user-actions {
-  display: none;
-}
+// .user-actions {
+//   display: none;
+// }
 
 .user-actions ul {
   display: flex;
@@ -83,4 +88,3 @@ input[type="search"]::-webkit-search-cancel-button {
   height: 41px;
   @include flex-between($justify: center);
 }
-

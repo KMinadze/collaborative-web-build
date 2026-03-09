@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as *;
+
+.content-filter ul li {
+  a {
+    color: $base-color;
+    transition: all 0.3s ease;
+    &:hover {
+      color: lighten($clicked-color, 10%);
+      background-color: $base-color;
+    }
+    &:focus {
+      color: $clicked-color;
+      font-weight: bold;
+      background-color: $base-color;
+    }
+  }
+}

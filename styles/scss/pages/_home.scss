@@ -15,7 +15,6 @@ body {
   font-family: "Satoshi", sans-serif;
 }
 
-
 // main container
 main {
   width: 100%;
@@ -23,8 +22,6 @@ main {
   margin-top: 54px;
   display: flex;
 }
-
-
 
 /* main sections  */
 
@@ -47,7 +44,7 @@ main {
 }
 
 .heading-area {
-  height: 41px;
+  min-height: 41px;
   width: 100%;
   @include flex-between();
 }
@@ -63,10 +60,10 @@ main {
 
 .made-for-you {
   width: 100%;
-    min-height: 256px;
-    // display: flex;
-    // justify-content: space-between;
-    // flex-wrap: wrap;
+  min-height: 256px;
+  // display: flex;
+  // justify-content: space-between;
+  // flex-wrap: wrap;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   gap: 18px;
@@ -161,8 +158,6 @@ main {
   border-radius: 50%;
 }
 
-
-
 /* rightaside section */
 
 // .activity_aside {
@@ -178,4 +173,3 @@ main {
 //   @include text-style($color: #e0e0e0);
 //   font-weight: 500;
 // }
-

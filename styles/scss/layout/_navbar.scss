@@ -18,16 +18,17 @@
 }
 
 .content-filter ul li {
-  padding-inline: 15px;
   height: 35px;
-  @include flex-between($justify: center);
-  background-color: #20202080;
-  border-radius: 8px;
-  cursor: pointer;
 }
 
 .content-filter ul a {
+  cursor: pointer;
+  border-radius: 8px;
+  height: 100%;
   color: #e0e0e0;
+  padding-inline: 15px;
+  background-color: #20202080;
+  @include flex-between($justify: center);
 }
 
 .content-filter ul .active {
