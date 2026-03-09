@@ -46,6 +46,10 @@
   cursor: pointer;
 }
 
+.play-btn:active {
+  transform: scale(0.9);
+}
+
 .progress-container {
   display: flex;
   align-items: center;
@@ -66,6 +70,11 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  transition: height 0.2s ease;
+}
+
+.progress-rail:hover {
+  height: 6px;
 }
 
 .progress-fill {
@@ -87,17 +96,44 @@
   width: 24px;
   height: 24px;
   object-fit: contain;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.icon-group img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.icon-group img[alt="Add to favorites"]:active {
+  transform: scale(1.4);
+  filter: hue-rotate(300deg) brightness(1.6);
+  transition: 0.1s;
 }
 
 .meta-ai {
-  padding-left: 5px;
-  border-left: 2px solid #8989894d;
+
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.meta-ai:hover {
+  filter: drop-shadow(0 0 8px #0052cc);
+  transform: scale(1.2) rotate(360deg) !important;
 }
 
 .footer-music-card {
   height: 57px;
   display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
   gap: 10px;
+}
+
+.footer-music-card:hover {
+  transform: scale(1.02);
+
 }
 
 .footer-music-card__img-wrapper img {
@@ -112,7 +148,78 @@
 
 .footer-discover-weekly h4 {
   @include text-style($color: #e0e0e0);
+  animation: neonGlow 2s ease-in-out infinite alternate;
 }
+
+@keyframes neonGlow {
+
+  from {
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff;
+  }
+
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 15px #4da6ff;
+  }
+
+}
+
 .footer-discover-weekly span {
   @include text-style();
+}
+
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px;
+
+}
+
+.album-name {
+
+  display: inline-block;
+
+  padding-left: 100%;
+
+  animation: marquee 10s linear infinite;
+
+  opacity: 0.7;
+
+}
+
+@keyframes marquee {
+
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+
+}
+
+.footer-music-card__img-wrapper img {
+  border-radius: 4px;
+  overflow: visible;
+  animation: pulse 2s infinite ease-in-out;
+
+}
+
+@keyframes pulse {
+
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0px rgba(77, 166, 255, 0);
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(77, 166, 255, 0.4);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0px rgba(77, 166, 255, 0);
+  }
+
 }
