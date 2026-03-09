@@ -7,7 +7,7 @@ a {
 .main-header {
   width: 100%;
   height: 54px;
-  @include flex-between;
+  @include flex-between();
   padding-inline: 15px;
   position: fixed;
   top: 0;
@@ -43,7 +43,6 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 210px;
   padding-inline: 15px;
   cursor: pointer;
 }
@@ -68,11 +67,15 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
+.user-actions {
+  display: none;
+}
+
 .user-actions ul {
   display: flex;
   align-items: center;
   padding-right: 10px;
-  gap: 13px;
+  gap: 8px;
 }
 
 .user-actions ul li a {
@@ -80,3 +83,4 @@ input[type="search"]::-webkit-search-cancel-button {
   height: 41px;
   @include flex-between($justify: center);
 }
+

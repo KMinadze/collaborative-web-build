@@ -122,7 +122,6 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 210px;
   padding-inline: 15px;
   cursor: pointer;
 }
@@ -149,11 +148,15 @@ input[type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
+.user-actions {
+  display: none;
+}
+
 .user-actions ul {
   display: flex;
   align-items: center;
   padding-right: 10px;
-  gap: 13px;
+  gap: 8px;
 }
 
 .user-actions ul li a {
@@ -284,6 +287,34 @@ input[type=search]::-webkit-search-cancel-button {
   border-left: 2px solid rgba(137, 137, 137, 0.3019607843);
 }
 
+.footer-music-card {
+  height: 57px;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-music-card__img-wrapper img {
+  width: 51px;
+  height: 51px;
+}
+
+.footer-discover-weekly {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-discover-weekly h4 {
+  font-size: 14px;
+  color: #E0E0E0;
+  letter-spacing: 3%;
+}
+
+.footer-discover-weekly span {
+  font-size: 14px;
+  color: #898989;
+  letter-spacing: 3%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -302,7 +333,7 @@ body {
 main {
   width: 100%;
   min-height: 100vh;
-  padding-top: 54px;
+  margin-top: 54px;
   display: flex;
 }
 
@@ -346,6 +377,7 @@ main {
 
 .made-for-you {
   width: 100%;
+  min-height: 256px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   gap: 18px;

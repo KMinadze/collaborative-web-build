@@ -94,3 +94,27 @@
     padding-left: 5px;
     border-left: 2px solid #8989894D;
 }
+
+.footer-music-card {
+    height: 57px;
+    display: flex;
+    gap: 10px;
+
+}
+
+.footer-music-card__img-wrapper img {
+    width: 51px;
+    height: 51px;
+}
+
+.footer-discover-weekly {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-discover-weekly h4 {
+    @include text-style ($color: #E0E0E0);
+}
+.footer-discover-weekly span {
+    @include text-style();
+}
