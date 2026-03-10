@@ -14,7 +14,14 @@
 @use "./components/card";
 
 // PAGES
+<<<<<<< Updated upstream
 @use "./pages/home" as *;
 @use "./pages/search" as *;
 @use "./pages/tables" as *;
 @use "./pages/discover" as *;
+=======
+@use './pages/home' as *;
+@use './pages/search' as *;
+@use './pages/tables' as *;
+@use './pages/player' as *;
+>>>>>>> Stashed changes
