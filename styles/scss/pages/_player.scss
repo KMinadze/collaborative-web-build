@@ -16,168 +16,121 @@ body {
   background-color: #060606;
   font-family: "Satoshi", sans-serif;
 }
-.song-details-page {
+main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+.main-content-lyrics {
+  width: calc(100% - 262px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: #8a9dbb2e;
-  width: 1491px;
-  height: 869px;
-  margin-top: 60px;
+}
+.song-details-page {
+  width: 100%;
+  padding-top: 60px;
   left: 273px;
   border-radius: 1px;
-  padding: 37px 954px 383px 37px;
 }
 .album-container {
-  width: 500px;
-  height: 500px;
+  min-height: 500px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 30px;
-  border-radius: 50%;
+  padding-inline: 30px;
+  padding-bottom: 20px;
 }
 .info-column {
-  width: 721px;
-  height: 494px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-}
-h1 {
-  width: 721px;
-  height: 98px;
-  font-size: 36px;
-  font-weight: 700;
-  letter-spacing: 3%;
-  color: #e0e0e0;
-  display: flex;
-  justify-content: center;
-  gap: 62px;
-}
-.hero-content {
-  display: flex;
-  align-items: flex-end;
-  gap: 62px;
-}
-.bold {
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 3%;
-}
-.white {
-  color: #e0e0e0;
-}
-.dark {
-  color: #898989;
-}
-.meta-row {
-  width: 529px;
-  height: 24px;
-  gap: 9px;
-  display: flex; 
-  align-items: center; 
-}
-.eclipse {
-  width: 3px;
-  height: 3px;
-  color: #898989;
-}
-.controls-section {
-  width: 360px;
-  height: 40px;
-  display: flex;
-  gap: 14px;
-  margin: 15px;
-}
-.genre-tags {
-  width: 721px;
-  height: 39px;
-  gap: 10px;
-  display: flex;
-  align-items: center;
-}
-.radius {
-  border-radius: 44px;
-  padding: 10px 20px 10px 20px;
   gap: 20px;
-  color: #898989;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  font-size: 14px;
-  font-weight: 400;
 }
-.artists-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 20px;
-  min-width: 200px;
-  text-align: left;
+.info-column h3 {
+  @include text-style($size: 28px, $color: #e0e0e0);
+  font-weight: 700;
 }
-.artist-pic {
+.album-details {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
+  flex-wrap: wrap;
 }
-h4 {
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 3%;
-  color: #e0e0e0;
+.album-details p {
+  @include text-style($color: #e0e0e0);
 }
-.role {
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 3%;
-  color: #898989;
+.album-details span {
+  @include text-style();
 }
-.artist-text {
+.button-section button {
+  height: 30px;
+  padding-inline: 10px;
+  background-color: transparent;
+  border: none;
+  @include text-style();
+  border: 2px dashed #89898940;
+  border-radius: 44px;
+}
+.artists-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.artists-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.artists-text {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  justify-content: center;
+}
+.artists-text p {
+  @include text-style($size: 16px, $color: #e0e0e0);
+}
+.artists-text span {
+  @include text-style($size: 16px);
+}
+.lyrics-icons {
+  height: 50px;
+  width: 100%;
+  padding-left: 40px;
+}
+.lyrics-icons ul {
+  height: 100%;
+  display: flex;
 }
 .lyrics-wrapper{
-
-margin-top: 13px;
-left: 46px;
+width: 100%;
+min-height: 100vh;
 display: flex;
-flex-direction: row;
-padding: 41px;
+flex-direction: column;
+}
+.lyrics-list{
+height: 50px;
+width: 100%;
+padding-left: 30px;
+border-bottom: 1px solid #89898933;
+}
+.lyrics-list ul{
+  height: 100%;
+display: flex;
+align-items: center;
 gap: 50px;
 }
-.light-color{
-font-size: 14px;
-font-weight: 500;
-letter-spacing: 3%;
-color: #E0E0E0;
-}
-.dark-color{
-font-size: 14px;
-font-weight: 500;
-letter-spacing: 3%;
-color: #898989;
-}
-.lyrics-lines{
+.lyrics-list ul li{
+ @include text-style();
 
-
-margin-top: 87px;
-left: 251px;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 15px;
 }
-.font{
-width: 912px;
-height: 38px;
-font-weight: 700;
-font-size: 28px;
-letter-spacing: 3%;
-color: #E0E0E0;
+.lyrics-images{
+  display: flex;
+  padding-top: 30px;
 }
-.main-layout{
-display: flex;
-flex-direction: column;
-}
-.side-tools{
-width: 40px;
-height: 289px;
+.lyrics-icons{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 gap: 12px;
 }
