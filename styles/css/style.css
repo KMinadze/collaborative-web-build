@@ -892,5 +892,25 @@ main {
     display: flex;
   }
 }
+main {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 54px;
+  display: flex;
+}
+
+.main-poster {
+  background: linear-gradient(180deg, rgb(34, 47, 46) 0%, rgb(43, 112, 106) 50%, rgba(34, 47, 46, 0.7) 100%);
+  min-height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.main-poster article {
+  height: 612px;
+}
 
 /*# sourceMappingURL=style.css.map */
