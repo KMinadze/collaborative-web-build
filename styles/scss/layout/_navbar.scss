@@ -1,4 +1,5 @@
 @use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
 .content-filter {
   height: 59px;
@@ -25,18 +26,24 @@
   cursor: pointer;
   border-radius: 8px;
   height: 100%;
-  color: #e0e0e0;
+  color: $base-color;
   padding-inline: 15px;
   background-color: #20202080;
   @include flex-between($justify: center);
 }
 
-.content-filter ul .active {
-  background-color: #e0e0e0;
-  @include flex-between($justify: center);
-}
-
-.content-filter ul .active a {
-  font-weight: 700;
-  @include text-style($color: #111111);
+.content-filter ul li {
+  a {
+    color: $base-color;
+    transition: all 0.3s ease;
+    &:hover {
+      color: lighten($clicked-color, 10%);
+      background-color: $base-color;
+    }
+    &:focus {
+      color: $clicked-color;
+      font-weight: bold;
+      background-color: $base-color;
+    }
+  }
 }

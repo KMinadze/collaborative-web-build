@@ -1,7 +1,9 @@
 @use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
 a {
   @include text-style();
+  transition: color 0.5s ease;
 }
 
 .main-header {
@@ -24,7 +26,6 @@ a {
 .my_Library {
   width: 262px;
 }
-
 .my_Library li {
   height: 41px;
   display: flex;
@@ -45,21 +46,38 @@ a {
   gap: 10px;
   padding-inline: 15px;
   cursor: pointer;
-}
-
-.home_Page li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-}
-
-.active {
-  border-radius: 8px;
-}
-
-a {
-  &:visited {
-    color: purple;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
   }
+  &.active {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+
+    a {
+      color: #111111;
+      font-weight: 700;
+    }
+
+    img {
+      filter: invert(1);
+    }
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+}
+
+.avatar {
+  transition:
+    filter 0.3s ease,
+    transform 0.4s ease;
+  cursor: pointer;
+}
+.avatar:hover {
+  filter: drop-shadow(0 0 8px #f08f10);
+  transform: scale(0.8) rotate(360deg) !important;
 }
 
 input[type="search"] {
@@ -78,10 +96,6 @@ input[type="search"]:focus {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-// .user-actions {
-//   display: none;
-// }
-
 .user-actions ul {
   display: flex;
   align-items: center;
@@ -93,4 +107,5 @@ input[type="search"]:focus {
   width: 41px;
   height: 41px;
   @include flex-between($justify: center);
+  cursor: pointer;
 }

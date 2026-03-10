@@ -14,6 +14,28 @@
   width: 248px;
   height: 41px;
   @include flex-between($justify: space-between);
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+.sidebar_Items:hover {
+  background-color: #9696967a;
+  box-shadow: 0 6px 15px rgba(230, 230, 230, 0.507);
+}
+.sidebar_Items a {
+  color: #555;
+  transition: 0.2s;
+}
+
+.sidebar_Items:hover a {
+  color: #000;
+  font-weight: 500;
+}
+.sidebar_Items img {
+  transition: 0.2s;
+}
+
+.sidebar_Items:hover img {
+  transform: scale(1.15);
 }
 
 .filter_Part {

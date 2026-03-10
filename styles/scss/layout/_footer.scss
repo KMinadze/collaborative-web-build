@@ -113,8 +113,9 @@
 }
 
 .meta-ai {
-
-  transition: filter 0.3s ease, transform 0.2s ease;
+  transition:
+    filter 0.3s ease,
+    transform 0.2s ease;
 }
 
 .meta-ai:hover {
@@ -133,7 +134,6 @@
 
 .footer-music-card:hover {
   transform: scale(1.02);
-
 }
 
 .footer-music-card__img-wrapper img {
@@ -152,15 +152,17 @@
 }
 
 @keyframes neonGlow {
-
   from {
-    text-shadow: 0 0 2px #fff, 0 0 5px #fff;
+    text-shadow:
+      0 0 2px #fff,
+      0 0 5px #fff;
   }
 
   to {
-    text-shadow: 0 0 5px #fff, 0 0 15px #4da6ff;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 15px #4da6ff;
   }
-
 }
 
 .footer-discover-weekly span {
@@ -171,23 +173,17 @@
   overflow: hidden;
   white-space: nowrap;
   width: 150px;
-
 }
 
 .album-name {
-
   display: inline-block;
-
   padding-left: 100%;
-
   animation: marquee 10s linear infinite;
-
   opacity: 0.7;
-
+  color: rgb(0, 255, 234) !important;
 }
 
 @keyframes marquee {
-
   0% {
     transform: translate(0, 0);
   }
@@ -195,18 +191,15 @@
   100% {
     transform: translate(-100%, 0);
   }
-
 }
 
 .footer-music-card__img-wrapper img {
   border-radius: 4px;
   overflow: visible;
   animation: pulse 2s infinite ease-in-out;
-
 }
 
 @keyframes pulse {
-
   0% {
     transform: scale(1);
     box-shadow: 0 0 0px rgba(77, 166, 255, 0);
@@ -221,5 +214,4 @@
     transform: scale(1);
     box-shadow: 0 0 0px rgba(77, 166, 255, 0);
   }
-
 }

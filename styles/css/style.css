@@ -62,24 +62,25 @@
   align-items: center;
 }
 
-.content-filter ul .active {
-  background-color: #e0e0e0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.content-filter ul li a {
+  color: #e0e0e0;
+  transition: all 0.3s ease;
 }
-
-.content-filter ul .active a {
-  font-weight: 700;
-  font-size: 14px;
+.content-filter ul li a:hover {
+  color: rgb(42.5, 42.5, 42.5);
+  background-color: #e0e0e0;
+}
+.content-filter ul li a:focus {
   color: #111111;
-  letter-spacing: 3%;
+  font-weight: bold;
+  background-color: #e0e0e0;
 }
 
 a {
   font-size: 14px;
   color: #898989;
   letter-spacing: 3%;
+  transition: color 0.5s ease;
 }
 
 .main-header {
@@ -125,19 +126,35 @@ a {
   gap: 10px;
   padding-inline: 15px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-
 .home_Page li:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
 }
-
-.active {
+.home_Page li.active {
+  background-color: #e0e0e0;
   border-radius: 8px;
 }
+.home_Page li.active a {
+  color: #111111;
+  font-weight: 700;
+}
+.home_Page li.active img {
+  filter: invert(1);
+}
+.home_Page li.active:hover {
+  background-color: #e0e0e0;
+}
 
-a:visited {
-  color: purple;
+.avatar {
+  transition: filter 0.3s ease, transform 0.4s ease;
+  cursor: pointer;
+}
+
+.avatar:hover {
+  filter: drop-shadow(0 0 8px #f08f10);
+  transform: scale(0.8) rotate(360deg) !important;
 }
 
 input[type=search] {
@@ -171,6 +188,7 @@ input[type=search]:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 /* left aside section */
@@ -188,6 +206,31 @@ input[type=search]:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+
+.sidebar_Items:hover {
+  background-color: rgba(150, 150, 150, 0.4784313725);
+  box-shadow: 0 6px 15px rgba(230, 230, 230, 0.507);
+}
+
+.sidebar_Items a {
+  color: #555;
+  transition: 0.2s;
+}
+
+.sidebar_Items:hover a {
+  color: #000;
+  font-weight: 500;
+}
+
+.sidebar_Items img {
+  transition: 0.2s;
+}
+
+.sidebar_Items:hover img {
+  transform: scale(1.15);
 }
 
 .filter_Part {
@@ -375,6 +418,7 @@ input[type=search]:focus {
   padding-left: 100%;
   animation: marquee 10s linear infinite;
   opacity: 0.7;
+  color: rgb(0, 255, 234) !important;
 }
 
 @keyframes marquee {
@@ -497,6 +541,13 @@ main {
   border-radius: 8px;
   position: relative;
   z-index: 2;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.music-card__img-wrapper:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(230, 230, 230, 0.507);
 }
 
 .music-card__img-wrapper::before {
@@ -530,11 +581,6 @@ main {
   color: #b3b3b3;
 }
 
-.discover-weekly {
-  display: flex;
-  justify-content: space-between;
-}
-
 .discover-weekly h4,
 .discover-weekly span {
   font-size: 14px;
@@ -559,13 +605,47 @@ main {
   justify-content: flex-start;
   gap: 18px;
 }
+.favourite-artists .music-card h4 {
+  font-size: 10px;
+}
+
+.music-card--rounded {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+}
 
 .music-card--rounded img {
   width: 100%;
-  height: 170px;
-  border-radius: 50%;
+  height: 100%;
+  display: block;
 }
 
+.music-card--rounded::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #00ffcc;
+  animation: spin 2s linear infinite;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* rightaside section */
 * {
   margin: 0;
@@ -811,19 +891,6 @@ main {
   Recent_searches {
     display: flex;
   }
-}
-.content-filter ul li a {
-  color: #e0e0e0;
-  transition: all 0.3s ease;
-}
-.content-filter ul li a:hover {
-  color: rgb(42.5, 42.5, 42.5);
-  background-color: #e0e0e0;
-}
-.content-filter ul li a:focus {
-  color: #111111;
-  font-weight: bold;
-  background-color: #e0e0e0;
 }
 
 /*# sourceMappingURL=style.css.map */

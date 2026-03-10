@@ -93,6 +93,12 @@ main {
   border-radius: 8px;
   position: relative;
   z-index: 2;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.music-card__img-wrapper:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(230, 230, 230, 0.507);
 }
 
 .music-card__img-wrapper::before {
@@ -126,11 +132,6 @@ main {
   color: #b3b3b3;
 }
 
-.discover-weekly {
-  display: flex;
-  justify-content: space-between;
-}
-
 .discover-weekly h4,
 .discover-weekly span {
   @include text-style($color: #e0e0e0);
@@ -150,12 +151,47 @@ main {
 .favourite-artists {
   justify-content: flex-start;
   gap: 18px;
+  .music-card {
+    h4 {
+      font-size: 10px;
+    }
+  }
 }
-
-.music-card--rounded img {
-  width: 100%;
+.music-card--rounded {
+  position: relative;
+  width: 170px;
   height: 170px;
   border-radius: 50%;
+  overflow: hidden;
+}
+.music-card--rounded img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.music-card--rounded::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #00ffcc;
+  animation: spin 2s linear infinite;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* rightaside section */
