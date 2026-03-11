@@ -93,44 +93,105 @@ main {
 .artists-text span {
   @include text-style($size: 16px);
 }
-.lyrics-icons {
-  height: 50px;
-  width: 100%;
-  padding-left: 40px;
-}
+
 .lyrics-icons ul {
   height: 100%;
   display: flex;
 }
-.lyrics-wrapper{
-width: 100%;
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-}
-.lyrics-list{
-height: 50px;
-width: 100%;
-padding-left: 30px;
-border-bottom: 1px solid #89898933;
-}
-.lyrics-list ul{
-  height: 100%;
-display: flex;
-align-items: center;
-gap: 50px;
-}
-.lyrics-list ul li{
- @include text-style();
-
-}
-.lyrics-images{
+.lyrics-wrapper {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  padding: 36px 38px;
+}
+.lyrics-list {
+  height: 50px;
+  width: 100%;
+  padding-left: 30px;
+  border-bottom: 1px solid #89898933;
+}
+.lyrics-list ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.lyrics-list ul li {
+  @include text-style();
+}
+.button-color {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.button-color::after {
+  content: ''; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+
+  border-radius: 2px;
+  box-shadow: 0 1px #1ED760; 
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.button-color:hover::after {
+  transform: scaleX(1);
+}
+.lyrics-images {
+  display: flex;
+  gap: 210px;
+  justify-content: center;
   padding-top: 30px;
 }
-.lyrics-icons{
+.lyrics-icons {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-gap: 12px;
+  gap: 12px;
+  height: 50px;
+  padding-left: 20px;
+}
+.lyrics-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.lyrics-text p {
+  display: flex;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 3%;
+  color: #e0e0e0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+  margin-bottom: 7px;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.lyric-line:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.lyric-line:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.lyric-line:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.lyric-line:nth-child(4) {
+  animation-delay: 0.4s;
 }
