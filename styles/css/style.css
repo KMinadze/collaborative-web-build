@@ -1343,5 +1343,37 @@ main {
     transform: translateY(0);
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #060606;
+  font-family: "Satoshi", sans-serif;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.pins-header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.pins-header li {
+  display: flex;
+  align-items: center;
+}
 
 /*# sourceMappingURL=style.css.map */
