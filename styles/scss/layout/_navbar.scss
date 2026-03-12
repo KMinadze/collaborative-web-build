@@ -3,19 +3,20 @@
 
 .content-filter {
   height: 59px;
-  width: calc(100% - 262px);
+  width: 100%;
   padding-inline: 25px;
   @include flex-between;
   position: fixed;
   top: 54px;
-  left: 262px;
+  left: 0;
   z-index: 998;
   background-color: #060606;
+  overflow-x: auto;
 }
 
 .content-filter ul {
   display: flex;
-  gap: 31px;
+  gap: 15px;
 }
 
 .content-filter ul li {
@@ -45,5 +46,15 @@
       font-weight: bold;
       background-color: $base-color;
     }
+  }
+}
+
+@media (min-width: 769px) {
+  .content-filter {
+    width: calc(100% - 262px);
+    left: 262px;
+  }
+  .content-filter ul {
+    gap: 30px;
   }
 }

@@ -1,23 +1,24 @@
 @use "../abstracts/mixins" as *;
 
 .player-bar {
-  width: calc(100% - 272px);
+  width: 100%;
   height: 80px;
   padding-inline: 12px;
-  margin: 0 5px 0 5px;
   background-color: #333842;
   border-radius: 10px;
   position: fixed;
   bottom: 0;
   right: 0;
+  margin: 5px;
   z-index: 888;
-  display: flex;
+  display: none;
   align-items: center;
 }
 
 .music-player {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   gap: 16px;
 }
@@ -29,7 +30,7 @@
 .player-controls {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
 }
 
 .control-icon {
@@ -51,7 +52,7 @@
 }
 
 .progress-container {
-  display: flex;
+  display: none;
   align-items: center;
   width: 100%;
   max-width: 250px;
@@ -88,7 +89,7 @@
 }
 
 .icon-group {
-  display: flex;
+  display: none;
   gap: 10px;
 }
 
@@ -213,5 +214,48 @@
   100% {
     transform: scale(1);
     box-shadow: 0 0 0px rgba(77, 166, 255, 0);
+  }
+}
+@media (min-width: 480px) {
+  .player-bar {
+    display: flex;
+  }
+  .music-player {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 769px) {
+  .player-bar {
+    width: calc(100% - 250px);
+    right: 5px;
+  }
+
+  .music-player {
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .progress-container {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .progress-container {
+    display: flex;
+    flex-grow: 1;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .player-bar {
+    width: calc(100% - 252px);
+  }
+  .music-player {
+    justify-content: start;
+    gap: 32px;
+  }
+  .icon-group {
+    display: flex;
+    margin-left: auto;
   }
 }

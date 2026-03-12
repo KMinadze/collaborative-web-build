@@ -5,7 +5,7 @@
 .sidebar {
   width: 262px;
   min-height: 100vh;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 11px;
 }
@@ -41,4 +41,14 @@
 .filter_Part {
   @include flex-between($justify: center);
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    display: flex;
+    width: 240px;
+  }
+  .sidebar_Items {
+    width: 230px;
+  }
 }

@@ -8,27 +8,31 @@ a {
 
 .main-header {
   width: 100%;
-  height: 54px;
+  height: 95px;
   @include flex-between();
-  padding-inline: 15px;
+  padding-inline: 5px;
   position: fixed;
   top: 0;
   left: 0;
   background-color: #060606;
   z-index: 999;
+  display: flex;
+  align-items: center;
 }
 
 .main-nav {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .my_Library {
-  width: 262px;
+  width: auto;
 }
 .my_Library li {
   height: 41px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 10px;
   cursor: pointer;
@@ -36,7 +40,7 @@ a {
 
 .home_Page {
   display: flex;
-  gap: 12px;
+  gap: 50px;
 }
 
 .home_Page li {
@@ -97,7 +101,7 @@ input[type="search"]:focus {
 }
 
 .user-actions ul {
-  display: flex;
+  display: none;
   align-items: center;
   padding-right: 10px;
   gap: 8px;
@@ -108,4 +112,26 @@ input[type="search"]:focus {
   height: 41px;
   @include flex-between($justify: center);
   cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .user-actions ul {
+    display: flex;
+  }
+  .home_Page {
+    gap: 12px;
+  }
+  .my_Library {
+    width: 262px;
+  }
+  .my_Library li {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 375px) {
+  main-header {
+    height: 54px;
+    padding-inline: 2px;
+  }
 }
