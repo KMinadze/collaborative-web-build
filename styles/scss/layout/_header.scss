@@ -25,6 +25,7 @@ a {
 
 .my_Library {
   width: 262px;
+  display: none;
 }
 .my_Library li {
   height: 41px;
@@ -36,15 +37,15 @@ a {
 
 .home_Page {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
 
 .home_Page li {
   height: 41px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding-inline: 15px;
+  gap: 4px;
+  padding-inline: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
@@ -69,6 +70,10 @@ a {
   }
 }
 
+.user-actions ul li:not(:last-child) {
+  display: none;
+}
+
 .avatar {
   transition:
     filter 0.3s ease,
@@ -84,8 +89,9 @@ input[type="search"] {
   background: transparent;
   border: 1px solid transparent;
   outline: none;
-  padding: 5px 10px;
+  padding: 5px 5px;
   @include text-style();
+  width: 100px;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -104,8 +110,32 @@ input[type="search"]:focus {
 }
 
 .user-actions ul li a {
-  width: 41px;
-  height: 41px;
+  width: 40px;
+  height: 40px;
   @include flex-between($justify: center);
   cursor: pointer;
+}
+
+// @media (min-width: 375px) {
+//   .avatar {
+//     display: block;
+//   }
+// }
+@media (min-width: 768px) {
+  .user-actions ul li:not(:last-child) {
+    display: block;
+  }
+  input[type="search"] {
+    width: 192px;
+  }
+  .home_Page li {
+    padding-inline: 15px;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .my_Library {
+    display: block;
+  }
 }

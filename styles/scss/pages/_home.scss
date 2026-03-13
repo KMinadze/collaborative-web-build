@@ -21,6 +21,7 @@ main {
   min-height: 100vh;
   margin-top: 54px;
   display: flex;
+  flex-direction: column;
 }
 
 /* main sections  */
@@ -28,8 +29,8 @@ main {
 .main_Content {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 262px);
-  margin-top: 59px;
+  width: 100%;
+
   border-radius: 8px;
   border: 1px solid #202020;
   padding-inline: 15px;
@@ -65,6 +66,7 @@ main {
   // justify-content: space-between;
   // flex-wrap: wrap;
   display: grid;
+  place-items: center;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   gap: 18px;
 }
@@ -191,6 +193,15 @@ main {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+  .main_Content {
+    margin-top: 59px;
   }
 }
 

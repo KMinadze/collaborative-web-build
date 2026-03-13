@@ -13,10 +13,10 @@ main {
 }
 
 .artist-page {
-  width: calc(100% - 262px);
+  width: 100%;
   min-height: 100vh;
   border-radius: 8px;
-  margin: 10px;
+
   padding-bottom: 60px;
   border: 1px solid #89898933;
   overflow: hidden;
@@ -33,8 +33,9 @@ main {
   background-position: top;
   background-repeat: no-repeat;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
   padding-bottom: 30px;
   padding-inline: 36px;
 }
@@ -148,7 +149,9 @@ label {
 #about-tab:checked ~ #about-content {
   display: flex;
 }
-
+.song-list {
+  padding-top: 10px;
+}
 .song-item {
   display: flex;
   align-items: center;
@@ -172,14 +175,17 @@ label {
 }
 
 #home-content {
+  flex-direction: column;
   justify-content: space-between;
   padding-inline: 25px;
+  gap: 20px;
 }
 
 .artists-pictures {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 16px;
 }
 
 .artists-pictures h3 {
@@ -187,7 +193,8 @@ label {
 }
 
 .best-daft {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   display: flex;
   justify-content: center;
   padding: 20px 11px;
@@ -206,7 +213,9 @@ label {
 }
 
 .artists-pictures img {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
 }
 
 .content#about-content {
@@ -324,4 +333,24 @@ label {
 }
 .albums-card p {
   @include text-style($size: 12px);
+}
+
+@media (min-width: 769px) {
+  .artist-page {
+    width: calc(100% - 262px);
+  }
+}
+@media (min-width: 1024px) {
+  .artist-banner {
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  #home-content {
+    flex-direction: row;
+    gap: 0;
+  }
 }
