@@ -9,7 +9,6 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  margin: 5px;
   z-index: 888;
   display: none;
   align-items: center;
@@ -247,9 +246,6 @@
 }
 
 @media (min-width: 1200px) {
-  .player-bar {
-    width: calc(100% - 252px);
-  }
   .music-player {
     justify-content: start;
     gap: 32px;

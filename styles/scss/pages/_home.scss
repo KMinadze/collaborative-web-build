@@ -28,12 +28,11 @@ main {
 .main_Content {
   display: flex;
   flex-direction: column;
-  border-radius: 8px;
-  padding-inline: 15px;
   width: 100%;
-  margin-top: 110px;
-  padding-inline: 10px;
-  border: none;
+  margin-top: 59px;
+  border-radius: 8px;
+  border: 1px solid #202020;
+  padding-inline: 15px;
 }
 
 .shelf {
@@ -62,9 +61,12 @@ main {
 .made-for-you {
   width: 100%;
   min-height: 256px;
+  // display: flex;
+  // justify-content: space-between;
+  // flex-wrap: wrap;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 18px;
 }
 
 .made-for-you .music-card {
@@ -207,14 +209,3 @@ main {
 //   @include text-style($color: #e0e0e0);
 //   font-weight: 500;
 // }
-
-@media (min-width: 769px) {
-  .main_Content {
-    width: calc(100% - 262px);
-    margin-top: 59px;
-  }
-  .made-for-you {
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    gap: 18px;
-  }
-}
