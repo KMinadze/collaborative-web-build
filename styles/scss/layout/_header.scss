@@ -25,6 +25,7 @@ a {
 
 .my_Library {
   width: 262px;
+  display: none;
 }
 .my_Library li {
   height: 41px;
@@ -69,6 +70,10 @@ a {
   }
 }
 
+.user-actions ul li:not(:last-child) {
+  display: none;
+}
+
 .avatar {
   transition:
     filter 0.3s ease,
@@ -108,4 +113,16 @@ input[type="search"]:focus {
   height: 41px;
   @include flex-between($justify: center);
   cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  .user-actions ul li:not(:last-child) {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .my_Library {
+    display: block;
+  }
 }
