@@ -215,7 +215,8 @@
     box-shadow: 0 0 0px rgba(77, 166, 255, 0);
   }
 }
-@media (min-width: 480px) {
+
+@media (min-width: 375px) {
   .player-bar {
     display: flex;
   }
@@ -223,10 +224,9 @@
     justify-content: space-between;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .player-bar {
-    width: calc(100% - 250px);
-    right: 5px;
+    width: calc(100% - 262px);
   }
 
   .music-player {

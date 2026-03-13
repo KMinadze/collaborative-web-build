@@ -3,16 +3,18 @@
 
 .content-filter {
   height: 59px;
-  width: calc(100% - 262px);
-  @include flex-between;
+  width: 100%;
+  @include flex-between();
   position: fixed;
   top: 54px;
-  left: 240px;
+  left: 0;
   z-index: 998;
   background-color: #060606;
   display: none;
 }
-
+#always-visible {
+  display: flex !important;
+}
 .content-filter ul {
   display: flex;
   gap: 31px;
@@ -48,8 +50,10 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .content-filter {
     display: flex;
+    left: 262px;
+    width: calc(100% - 262px);
   }
 }
