@@ -41,6 +41,7 @@ main {
   gap: 30px;
   padding-inline: 30px;
   padding-bottom: 20px;
+  flex-direction: column;
 }
 .info-column {
   display: flex;
@@ -194,4 +195,12 @@ main {
 }
 .lyric-line:nth-child(4) {
   animation-delay: 0.4s;
+}
+
+@media ( min-width: 1200px ) {
+
+.album-container{
+  flex-direction: row;
+}
+
 }
