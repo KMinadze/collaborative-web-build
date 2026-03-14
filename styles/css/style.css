@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Satoshi";
   src: url("../../fonts/Satoshi_complete/WEB/fonts/Satoshi-Regular.woff2") format("woff2"), url("../../fonts/Satoshi_complete/WEB/fonts/Satoshi-Regular.woff") format("woff");
@@ -248,6 +247,7 @@ input[type=search]:focus {
   position: fixed;
   top: 50px;
   background-color: #060606;
+  z-index: 1000;
 }
 
 .sidebar_Items {
@@ -729,7 +729,6 @@ main {
   letter-spacing: 3%;
 }
 
-/* მედიაზე არ ვარგა  */
 .favourite-artists {
   justify-content: flex-start;
   gap: 18px;
@@ -783,7 +782,6 @@ main {
     margin-top: 59px;
   }
 }
-/* rightaside section */
 * {
   margin: 0;
   padding: 0;
