@@ -62,9 +62,6 @@ main {
 .made-for-you {
   width: 100%;
   min-height: 256px;
-  // display: flex;
-  // justify-content: space-between;
-  // flex-wrap: wrap;
   display: grid;
   place-items: center;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
