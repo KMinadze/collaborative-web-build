@@ -116,11 +116,6 @@ input[type="search"]:focus {
   cursor: pointer;
 }
 
-// @media (min-width: 375px) {
-//   .avatar {
-//     display: block;
-//   }
-// }
 @media (min-width: 768px) {
   .user-actions ul li:not(:last-child) {
     display: block;
