@@ -30,7 +30,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-
+  margin-top: 59px;
   border-radius: 8px;
   border: 1px solid #202020;
   padding-inline: 15px;
@@ -195,9 +195,6 @@ main {
 @media (min-width: 768px) {
   main {
     flex-direction: row;
-  }
-  .main_Content {
-    margin-top: 59px;
   }
 }
 
